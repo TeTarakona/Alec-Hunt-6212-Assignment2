@@ -1,5 +1,3 @@
-BEGIN TRANSACTION;
-
 CREATE TABLE product_category (
     id SERIAL PRIMARY KEY,
     name TEXT
@@ -33,5 +31,3 @@ CREATE TABLE product_discount (
     product_id int REFERENCES product(id) UNIQUE,
     discount_type_id int REFERENCES discount_type(id)
 );
-
-COMMIT;
